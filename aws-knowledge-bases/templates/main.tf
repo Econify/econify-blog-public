@@ -1,15 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-}
-
-terraform {
-  backend "s3" {
-    bucket = "econify-tfstate"
-    region = "us-east-1"
-    key = "kb-demo/terraform.tfstate"
-  }
-}
-
 variable "knowledge_base_name" {
   type        = string
   default     = "my-bedrock-kb-demo"
